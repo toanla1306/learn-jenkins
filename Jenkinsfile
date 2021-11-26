@@ -2,7 +2,9 @@ pipeline {
 	agent any
 	stages {
 		stage('Build') {
-			//mnvn clean package
+			steps{
+				//mnvn clean package
+			}
 		}
 	}
 }
