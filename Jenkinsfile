@@ -1,10 +1,32 @@
 pipeline {
 	agent any
+	tools {
+		maven "Maven"
+	}
 	stages {
 		stage('Build') {
 			steps{
 				//mnvn clean package
-				echo "test run...."
+				sh script: 'mvn clean package'
+			}
+		}
+		stage('Upload War tog Nexus'){
+			steps{
+				nexusArtifactUploader artifacts: [
+					[
+						artifactId: 'spring-petclinic', 
+						classifier: '', 
+						file: 'target/petclinic-4.0.0.war', 
+						type: 'war'
+					]
+				], 
+				credentialsId: 'nexus3', 
+				groupId: 'org.springframework.samples', 
+				nexusUrl: '192.168.10.136:8081', 
+				nexusVersion: 'nexus3',
+				protocol: 'http', 
+				repository: 'simpleapp-release', 
+				version: '4.0.0'
 			}
 		}
 	}
