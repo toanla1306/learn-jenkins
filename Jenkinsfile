@@ -16,7 +16,7 @@ pipeline {
 					[
 						artifactId: 'spring-petclinic', 
 						classifier: '', 
-						file: 'target/petclinic-2.5.6.war', 
+						file: 'target/petclinic-2.5.0-SNAPSHOT.war', 
 						type: 'war'
 					]
 				], 
