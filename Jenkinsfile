@@ -26,7 +26,7 @@ pipeline {
 				nexusVersion: 'nexus3',
 				protocol: 'http', 
 				repository: 'simpleapp-release', 
-				version: '2.5.0'
+				version: '2.5.0-SNAPSHOT'
 			}
 		}
 	}
