@@ -16,7 +16,7 @@ pipeline {
 					[
 						artifactId: 'spring-petclinic', 
 						classifier: '', 
-						file: 'target/petclinic-2.5.0-SNAPSHOT.war', 
+						file: 'target/petclinic-2.5.0.war', 
 						type: 'war'
 					]
 				], 
@@ -26,7 +26,7 @@ pipeline {
 				nexusVersion: 'nexus3',
 				protocol: 'http', 
 				repository: 'simpleapp-release', 
-				version: '2.5.0-SNAPSHOT'
+				version: '2.5.0'
 			}
 		}
 	}
