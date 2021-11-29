@@ -14,19 +14,19 @@ pipeline {
 			steps{
 				nexusArtifactUploader artifacts: [
 					[
-						artifactId: 'spring-boot-starter-parent', 
+						artifactId: 'spring-petclinic', 
 						classifier: '', 
 						file: 'pom.xml', 
 						type: 'pom'
 					]
 				], 
 				credentialsId: 'nexus3', 
-				groupId: 'org.springframework.boot', 
+				groupId: 'org.springframework.samples', 
 				nexusUrl: '192.168.10.136:8081', 
 				nexusVersion: 'nexus3',
 				protocol: 'http', 
 				repository: 'simpleapp-release', 
-				version: '2.5.6'
+				version: '2.5.0-SNAPSHOT'
 			}
 		}
 	}
