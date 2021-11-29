@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage('Upload War tog Nexus'){
 			steps{
-				sript {
+				script {
 					def pom = readMavenPom file: 'pom.xml'
 					nexusArtifactUploader artifacts: [
 						[
