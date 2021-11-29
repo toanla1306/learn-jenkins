@@ -13,6 +13,7 @@ pipeline {
 		}
 		stage('Upload War tog Nexus'){
 			steps{
+				pom = readMavenPom file: "pom.xml";
 				nexusArtifactUploader artifacts: [
 					[
 						artifactId: 'spring-petclinic', 
