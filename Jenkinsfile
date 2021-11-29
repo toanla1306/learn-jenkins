@@ -15,7 +15,7 @@ pipeline {
 		stage('Upload War tog Nexus'){
 			steps{
 				script {
-					def sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
+					sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
 					pom = readMavenPom file: 'pom.xml';
 					nexusArtifactUploader artifacts: [
 						[
