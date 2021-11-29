@@ -1,3 +1,4 @@
+
 pipeline {
 	agent any
 	tools {
@@ -17,7 +18,7 @@ pipeline {
 						artifactId: 'spring-petclinic', 
 						classifier: '', 
 						file: 'pom.xml', 
-						type: 'war'
+						type: pom.packaging
 					]
 				], 
 				credentialsId: 'nexus3', 
