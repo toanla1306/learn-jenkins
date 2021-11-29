@@ -115,6 +115,11 @@
       <artifactId>spring-boot-devtools</artifactId>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>permissive-script-security</artifactId>
+      <version>0.7</version>
+    </dependency>
   </dependencies>
 
   <build>
