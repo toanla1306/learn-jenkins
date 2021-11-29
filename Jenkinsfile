@@ -17,7 +17,7 @@ pipeline {
 						artifactId: 'spring-petclinic', 
 						classifier: '', 
 						file: 'pom.xml', 
-						type: 'pom'
+						type: 'war'
 					]
 				], 
 				credentialsId: 'nexus3', 
