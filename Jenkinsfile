@@ -22,7 +22,7 @@ pipeline {
 		stage('Upload War tog Nexus'){
 			steps{
 				sript {
-					def pom = readMavenPom file: 'pom.xml',
+					def pom = readMavenPom file: 'pom.xml'
 					nexusArtifactUploader artifacts: [
 						[
 							artifactId: 'spring-petclinic', 
