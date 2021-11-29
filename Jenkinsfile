@@ -4,14 +4,6 @@ pipeline {
 	tools {
 		maven "Maven"
 	}
-	stages {
-		stage("clone code"){
-			steps{
-				script{
-					git "https://github.com/toanla1306/learn-jenkins.git"
-				}
-			}
-		}
 		stage('Build') {
 			steps{
 				//mnvn clean package
