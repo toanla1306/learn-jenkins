@@ -4,6 +4,7 @@ pipeline {
 	tools {
 		maven "Maven"
 	}
+	stages {
 		stage('Build') {
 			steps{
 				//mnvn clean package
