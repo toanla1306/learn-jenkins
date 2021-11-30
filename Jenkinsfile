@@ -33,7 +33,7 @@ pipeline {
 				// 	repository: 'simpleapp-snapshot/', 
 				// 	version: '2.5.0-SNAPSHOT'
 				// }
-				sh "mvn deploy:deploy-file DgroupId=org.springframework.samples\
+				sh "mvn deploy:deploy-file -DgroupId=org.springframework.samples\
 						-DartifactId=spring-petclinic\
 						-Dversion=2.5.0-SNAPSHOT\
 						-DgeneratePom=true\
