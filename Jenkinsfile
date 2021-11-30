@@ -15,14 +15,14 @@ pipeline {
 		stage('Upload War tog Nexus'){
 			steps{
 				script {
-					def version = sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
-					pom = readMavenPom file: 'pom.xml';
+					// def version = sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
+					// pom = readMavenPom file: 'pom.xml';
 					nexusArtifactUploader artifacts: [
 						[
 							artifactId: 'spring-petclinic', 
 							classifier: '',
 							file: 'pom.xml', 
-							type: pom.packaging
+							type: 'war'
 						]
 					], 
 					credentialsId: 'nexus3', 
