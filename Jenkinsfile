@@ -36,11 +36,12 @@ pipeline {
 				sh "mvn deploy:deploy-file DgroupId=org.springframework.samples\
 						-DartifactId=spring-petclinic\
 						-Dversion=2.5.0-SNAPSHOT\
+						-DgeneratePom=true\
 						-Dpackaging=war\
 						-Dfile=pom.xml\
 						-DrepositoryId=simpleapp-snapshot/\
-						-Durl=http://192.168.10.136:8081/service/rest/repository/browse/simpleapp-snapshot/\
-						-DgeneratePom=false"
+						-Durl=http://192.168.10.136:8081/repository/simpleapp-snapshot/\
+						"
 				
 			}
 		}
