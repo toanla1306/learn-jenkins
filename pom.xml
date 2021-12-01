@@ -272,11 +272,6 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-    <repository>
-      <id>simpleapp-snapshot</id>
-      <name>admin</name>
-      <url>http://192.168.10.136:8081/repository/simpleapp-snapshot/</url>
-    </repository>
   </repositories>
 
   <pluginRepositories>
@@ -298,6 +293,14 @@
     </pluginRepository>
   </pluginRepositories>
 
+  <distributionManagement>
+    <repository>
+      <id>simpleapp-snapshot</id>
+      <name>admin</name>
+      <url>http://192.168.10.136:8081/repository/simpleapp-snapshot/</url>
+    </repository>
+  </distributionManagement>
+  
   <profiles>
     <profile>
       <id>css</id>
