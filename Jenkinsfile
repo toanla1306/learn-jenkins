@@ -33,8 +33,8 @@ pipeline {
 				// 	repository: 'simpleapp-snapshot/', 
 				// 	version: '2.5.0-SNAPSHOT'
 				// }
-                sh "mvn -Drepo.id=simpleapp-snapshot -Drepo.login=admin -Drepo.pwd=123 clean deploy"
-                                //sh "mvn -X clean | grep settings"
+                //sh "mvn -Drepo.id=simpleapp-snapshot -Drepo.login=admin -Drepo.pwd=123 clean deploy"
+                                sh "mvn -X clean deploy | grep settings"
 				sh "mvn deploy:deploy-file -DgroupId=org.springframework.samples\
 						-DartifactId=spring-petclinic\
 						-Dversion=2.5.0-SNAPSHOT\
