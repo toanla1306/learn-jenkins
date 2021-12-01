@@ -33,7 +33,7 @@ pipeline {
 				// 	repository: 'simpleapp-snapshot/', 
 				// 	version: '2.5.0-SNAPSHOT'
 				// }
-                //sh "mvn -Drepo.id=simpleapp-snapshot -Drepo.login=admin -Drepo.pwd=123 clean deploy"
+                sh "mvn -Drepo.id=simpleapp-snapshot -Drepo.login=admin -Drepo.pwd=123 clean deploy -e"
 				sh "mvn deploy:deploy-file -DgroupId=org.springframework.samples\
 						-DartifactId=spring-petclinic\
 						-Dversion=2.5.0-SNAPSHOT\
@@ -42,7 +42,7 @@ pipeline {
 						-Dfile=pom.xml\
 						-DcredentialsId=nexus3\
 						-DrepositoryId=simpleapp-snapshot/\
-						-Durl=/root/Downloads/\
+						-Durl=http://192.168.10.136:8081/repository/simpleapp-snapshot/\
 						"
 				
 			}
