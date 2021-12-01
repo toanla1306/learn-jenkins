@@ -41,7 +41,6 @@ pipeline {
 						-DgeneratePom=true\
 						-Dpackaging=war\
 						-Dfile=pom.xml\
-						-DcredentialsId=nexus3\
 						-DrepositoryId=simpleapp-snapshot/\
 						-Durl=http://192.168.10.137/home\
 						"
