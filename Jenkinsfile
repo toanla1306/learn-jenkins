@@ -42,7 +42,7 @@ pipeline {
 						-Dpackaging=war\
 						-Dfile=pom.xml\
 						-DrepositoryId=simpleapp-snapshot/\
-						-Durl=http://192.168.10.137/home\
+						-Durl=http://192.168.10.137/\
 						"
 				
 			}
