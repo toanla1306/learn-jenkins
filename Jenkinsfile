@@ -34,16 +34,16 @@ pipeline {
 				// 	version: '2.5.0-SNAPSHOT'
 				// }
                 //sh "mvn -Drepo.id=simpleapp-snapshot -Drepo.login=admin -Drepo.pwd=123 clean deploy"
-                                sh "mvn -X clean deploy | grep settings"
-				sh "mvn deploy:deploy-file -DgroupId=org.springframework.samples\
-						-DartifactId=spring-petclinic\
-						-Dversion=2.5.0-SNAPSHOT\
-						-DgeneratePom=true\
-						-Dpackaging=war\
-						-Dfile=pom.xml\
-						-DrepositoryId=simpleapp-snapshot/\
-						-Durl=http://192.168.10.137/\
-						"
+                                sh "mvn -X clean deploy"
+				//sh "mvn deploy:deploy-file -DgroupId=org.springframework.samples\
+						//-DartifactId=spring-petclinic\
+						//-Dversion=2.5.0-SNAPSHOT\
+						//-DgeneratePom=true\
+						//-Dpackaging=war\
+						//-Dfile=pom.xml\
+						//-DrepositoryId=simpleapp-snapshot/\
+						//-Durl=http://192.168.10.136:8081/repository/simpleapp-snapshot/\
+						//"
 				
 			}
 		}
