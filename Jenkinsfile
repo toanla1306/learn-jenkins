@@ -41,7 +41,7 @@ pipeline {
 						-Dfile=pom.xml\
 						-DrepositoryId=simpleapp-snapshot/\
 						-Durl=http://192.168.10.136:8081/repository/simpleapp-snapshot/\
-						"
+						-DcredentialsId=nexus3"
 				
 			}
 		}
