@@ -5,13 +5,13 @@ pipeline {
 		maven "Maven"
 	}
 	stages {
-		// stage('Build') {
-		// 	steps{
-		// 		//mnvn clean package
-		// 		sh script: 'mvn clean package'
-		// 		sh "mvn package -DskipTests=true"
-		// 	}
-		// }
+		stage('Build') {
+			steps{
+				//mnvn clean package
+				sh script: 'mvn clean package'
+				sh "mvn package -DskipTests=true"
+			}
+		}
 		// stage('Upload War tog Nexus'){
 		// 	steps{
 		// 		// script {
@@ -49,8 +49,12 @@ pipeline {
 		// }
 		stage("deploy to tomcat"){
 			steps{
-				sh 'curl -o /usr/local/tomcat/webapps/myapp.war "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
-				sh "mvn tomcat7: deploy"
+				//sh 'curl -o /usr/local/tomcat/webapps/myapp.war "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
+				sh "mvn archetype:generate -DgroupId=org.springframework.samples\ 
+                                                -DaritfactId=spring-petclinic\ 
+                                                -DarchetypeArtifactId=maven-archetype-webapp\
+                                                -DinteractiveMode=false"
+                                sh "mvn tomcat7: deploy"
 			}
 		}
 	}
