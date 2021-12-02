@@ -246,11 +246,11 @@
         </configuration>
       </plugin>
 
-      <plugin>
+    <!--   <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-archetype-plugin</artifactId>
         <version>3.2.0</version>
-      </plugin>
+      </plugin> -->
 
       <plugin>
          <groupId>org.apache.tomcat.maven</groupId>
@@ -433,11 +433,11 @@
                 </lifecycleMappingMetadata>
               </configuration>
             </plugin>
-            <plugin>
+            <!-- <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-archetype-plugin</artifactId>
               <version>3.2.0</version>
-            </plugin>
+            </plugin> -->
           </plugins>
         </pluginManagement>
       </build>
