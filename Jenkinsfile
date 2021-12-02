@@ -12,9 +12,9 @@ pipeline {
 // 				sh "mvn package -DskipTests=true"
 // 			}
 // 		}
-		// stage('Upload War tog Nexus'){
-		// 	steps{
-		// 		// script {
+		stage('Upload War tog Nexus'){
+			steps{
+				// script {
 		// 		// 	// def version = sh script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true
 		// 		// 	// pom = readMavenPom file: 'pom.xml';
 		// 		// 	nexusArtifactUploader artifacts: [
