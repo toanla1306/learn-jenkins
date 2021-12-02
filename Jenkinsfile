@@ -49,7 +49,7 @@ pipeline {
 		// }
 		stage("deploy to tomcat"){
 			steps{
-				sh 'curl "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war" -o /usr/local/tomcat/webapps/'
+				sh 'curl -o /usr/local/tomcat/webapps/ "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
 				sh "mvn tomcat7: deploy"
 			}
 		}
