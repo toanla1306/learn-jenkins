@@ -5,13 +5,13 @@ pipeline {
 		maven "Maven"
 	}
 	stages {
-		stage('Build') {
-			steps{
-				//mnvn clean package
-				sh script: 'mvn clean package'
-				sh "mvn package -DskipTests=true"
-			}
-		}
+// 		stage('Build') {
+// 			steps{
+// 				//mnvn clean package
+// 				sh script: 'mvn clean package'
+// 				sh "mvn package -DskipTests=true"
+// 			}
+// 		}
 		// stage('Upload War tog Nexus'){
 		// 	steps{
 		// 		// script {
