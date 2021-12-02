@@ -50,8 +50,9 @@ pipeline {
 		stage("deploy to tomcat"){
 			steps{
 				//sh 'curl -o /usr/local/tomcat/webapps/myapp.war "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
-				sh "mvn archetype:generate -DgroupId=org.springframework.samples -DaritfactId=spring-petclinic -DinteractiveMode=false"
-                                sh "mvn tomcat7: deploy"
+				//sh "mvn archetype:generate -DgroupId=org.springframework.samples -DaritfactId=spring-petclinic -DinteractiveMode=false"
+                                //sh "mvn tomcat7: deploy"
+                                sh 'curl -o /var/myapp123.war "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
 			}
 		}
 	}
