@@ -14,7 +14,7 @@ pipeline {
 // 		}
 		stage('Upload War tog Nexus'){
 			steps{
-                             sh "mvn -X clean deploy > logs-run-nexus.txt"			
+                             sh "mvn -X clean deploy > /var/jenkins_home/logs-run-nexus.txt"			
 			}
 		}
 // 		stage("deploy to tomcat"){
