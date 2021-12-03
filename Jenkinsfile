@@ -51,7 +51,7 @@ pipeline {
 			steps{
                                 sh "curl -X GET 192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211202.040705-11.war --output /var/jenkins_home/.m2/petclinic.war"
                                 sh "curl --insecure --user root:1234567 -T /var/jenkins_home/.m2/petclinic.war sftp://192.168.10.138/usr/share/tomcat/webapps/"
-                                sh "mvn tomcat7:deploy"
+                                sh "mvn tomcat7:redeploy"
                                 //sh "mvn -X clean deploy -Durl=http://192.168.10.138:8080/manager/text"
 				//sh 'curl -o /usr/local/tomcat/webapps/myapp.war "192.168.10.136:8081/repository/simpleapp-snapshot/org/springframework/samples/spring-petclinic/2.5.0-SNAPSHOT/spring-petclinic-2.5.0-20211201.165740-10.war"'
 				//sh "mvn archetype:generate -DgroupId=org.springframework.samples -DaritfactId=spring-petclinic -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false"
