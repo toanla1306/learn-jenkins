@@ -12,7 +12,7 @@ pipeline {
 // 				sh "mvn package -DskipTests=true"
 // 			}
 // 		}
-		stage('Upload War tog Nexus'){
+		stage('Upload War log Nexus'){
 			steps{
                              sh "mvn -X clean deploy > /var/jenkins_home/logs-run-nexus.txt"			
 			}
