@@ -260,6 +260,7 @@
             <url>http://192.168.10.138:8080/manager/text</url>
             <server>TomcatServer</server>
             <path>/petclinic</path>
+            <update>true</update>
          </configuration>
       </plugin>
       
